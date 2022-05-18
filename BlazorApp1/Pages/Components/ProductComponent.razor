@@ -1,0 +1,21 @@
+﻿@inject ICartService CartService
+
+<div class="variable-wrapper">
+    <div class="product" @onclick="OnProductClick">
+        <img class="product-image" src="@imgUrl"/>
+        <div class="product-info">
+            <span class="product-name">@Product.Name</span>
+            <span class="product-price">@Product.Price</span>
+        </div>
+    </div>
+</div>
+@code {
+    private string imgUrl => $"/src/{Product.MarketingName}.jpg";
+    [Parameter]
+    public Product Product{ get; set; }
+
+    public void OnProductClick()
+    {
+        CartService.AddProduct(Product);
+    }
+}

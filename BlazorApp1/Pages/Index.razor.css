@@ -1,0 +1,42 @@
+﻿.products-page {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: auto 10%;
+    grid-template-areas:
+        "products-container  products-cart";
+}
+
+.products-container {
+    grid-area: products-container;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .products-container .category-group {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title"
+            "products";
+    }
+
+.category-group .category-title {
+    grid-area: title;
+    width: 90%;
+    margin: 20px 0px;
+    border-bottom: dashed 1px black;
+    font-weight: 900;
+}
+
+.category-group .category-products {
+    grid-area: products;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.products-cart {
+    grid-area: products-cart;
+    overflow-y: scroll;
+}

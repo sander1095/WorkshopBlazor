@@ -1,0 +1,38 @@
+﻿.receipt-page {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt {
+    background: #ffffff;
+    width: 50%;
+    height: 100%;
+    padding: 0px 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-items {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.btn-submit {
+    background: #004A45;
+    color: #F09D51;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 10px;
+}

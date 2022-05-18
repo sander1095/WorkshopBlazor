@@ -1,19 +1,32 @@
 ﻿@page "/"
 @inject IProductsService ProductService
 
-<h3>Index</h3>
+<h3>Koop product nu</h3>
+<div class="products-page">
+    <div class="products-container">
+        @foreach (var categories in Products.GroupBy(p => p.Category))
+        {
+            <div class="category-group">
+                <span class="category-title">@categories.Key.Name</span>
+                <div class="category-products">
+                @foreach (var product in categories)
+                {
+                    <BlazorApp1.Pages.Components.ProductComponent Product="@product"></BlazorApp1.Pages.Components.ProductComponent>
+                }
+                </div>
+            </div>
+        }
+    </div>
 
-@foreach (var product in Products)
-{
-    <br/><span>@product.Name</span>
-}
+    <BlazorApp1.Pages.Components.CartComponent CssClass="products-cart" ></BlazorApp1.Pages.Components.CartComponent>
+</div>
 
 @code {
     public List<Product> Products { get; set; } = new();
+
     protected override void OnAfterRender(bool firstRender)
     {
-
-        if(firstRender)
+        if (firstRender)
         {
             Products = ProductService.GetProducts();
             StateHasChanged();

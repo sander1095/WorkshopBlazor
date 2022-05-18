@@ -1,0 +1,55 @@
+﻿@using Blazor_WebAssembly.Services
+@using Class_Library.Models.Products
+@inject ICartService CartService
+@inject NavigationManager NavManager
+
+<div class="@CssClass cart">
+    <div class="receipt">
+    @foreach(var orderItem in CartService.OrderedItems){
+        <div class="receipt-item">
+            <span class="amount"> @orderItem.Amount x</span>
+            <span class="name"> @orderItem.Product.Name </span>
+            <span class="price"> €@orderItem.Product.Price </span>
+            <span class="total"> €@(orderItem.Product.Price * orderItem.Amount)</span>
+            <button @onclick="() => OnRemoveClicked(orderItem.Product)" class="itembutton">
+                <img src="/src/close.png"/>
+            </button>
+        </div>
+    }
+    </div>
+    <div class="totals">
+        <p>Total: €@CartService.OrderedItems.Sum(x => (x.Amount * x.Product.Price))</p>
+    </div>
+    <div class="buttons">
+        <input type="button" class="button btn-checkout" value="checkout" @onclick="NavigateCheckout"/>
+        <input type="button" class="button btn-remove" value="remove all" @onclick="() => CartService.NewCart()"/>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string CssClass { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        CartService.CartItemsChanged += OnCartUpdated;
+        return base.OnInitializedAsync();
+    }
+
+    private void NavigateCheckout()
+    {
+        if(CartService.OrderedItems.Count > 0) {
+            NavManager.NavigateTo("/checkout");
+        }
+    }
+
+    private void OnRemoveClicked(Product product)
+    {
+        CartService.RemoveProduct(product);
+    }
+
+    private void OnCartUpdated()
+    {
+        StateHasChanged();
+    }
+}
