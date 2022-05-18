@@ -1,0 +1,24 @@
+﻿@page "/"
+@inject IProductsService ProductService
+
+<h3>Index</h3>
+
+@foreach (var product in Products)
+{
+    <br/><span>@product.Name</span>
+}
+
+@code {
+    public List<Product> Products { get; set; } = new();
+    protected override void OnAfterRender(bool firstRender)
+    {
+
+        if(firstRender)
+        {
+            Products = ProductService.GetProducts();
+            StateHasChanged();
+        }
+
+        base.OnAfterRender(firstRender);
+    }
+}

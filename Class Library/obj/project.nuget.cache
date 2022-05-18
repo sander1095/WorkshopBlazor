@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fLe0TMzmQhewyJ47RGeDQUVS0ytqzMRnYAkJTojO6fuvYTU7z2jQ9lNv/BMaUigq8rL1jzf/pSuhpOF54kz8rg==",
+  "dgSpecHash": "bgsfTnOPc3rcGIs/FhlNjdFScDGNP8usnzXTxW504KEG0oTURH5klLAs9/nvcg5Er6Dj77B7LbiuGaYnZvz02Q==",
   "success": true,
-  "projectFilePath": "F:\\Git\\Trendwatch WebDev - workshop Blazor\\Blazor Server\\Class Library\\Class Library.csproj",
+  "projectFilePath": "C:\\Projects\\WorkshopBlazor\\Class Library\\Class Library.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
