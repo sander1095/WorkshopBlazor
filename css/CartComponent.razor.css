@@ -1,0 +1,107 @@
+﻿.cart {
+    --item-h: 34;
+    --item-s: 80%;
+    --item-l: 97%;
+    --button-h: 176;
+    --button-s: 100%;
+    --button-l: 15%;
+    --button-fh: 176;
+    --button-fs: 80%;
+    --button-fl: 95%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 10%;
+    grid-template-areas:
+        "receipt receipt"
+        "totals buttons";
+    flex-flow: column nowrap;
+    background: hsl(var(--item-h), var(--item-s), var(--item-l));
+    border-left: dashed 1px black;
+}
+
+.receipt {
+    grid-area: receipt;
+    padding: 0px 5px;
+}
+
+.receipt-item {
+    display: grid;
+    margin-bottom: 15px;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "name amount price"
+        "button none total";
+    background: hsl(var(--item-h), var(--item-s), var(--item-l));
+}
+
+.receipt-item:hover{
+    --item-l:90%;
+}
+
+    .receipt-item .amount {
+        grid-area: amount;
+    }
+
+    .receipt-item .name {
+        grid-area: name;
+    }
+    .receipt-item .price {
+        grid-area: price;
+    }
+    .receipt-item .total {
+        grid-area: total;
+    }
+
+    .receipt-item .itembutton {
+        grid-area: button;
+        height: 20px;
+        width: 20px;
+        background: none;
+        border: none;
+    }
+
+    .button img{
+        height: 15px;
+        width: 15px;
+    }
+
+.cart .totals{
+    grid-area: totals;
+    align-self:flex-end;
+    align-items:flex-end;
+    padding: 0px 5px 0px 0px;
+}
+
+.cart .buttons {
+    grid-area: buttons;
+    align-self: flex-end;
+    align-items: flex-end;
+    display:flex;
+    flex-flow: column nowrap;
+    padding: 0px 5px 0px 0px;
+}
+
+.button {
+    font-weight: 600;
+    background: hsl(var(--button-h), var(--button-s), var(--button-l));
+    color: hsl(var(--button-fh), var(--button-fs), var(--button-fl));
+    width:150px;
+    margin-bottom: 5px;
+}
+
+.button:hover{
+    --button-l:90%;
+    --button-fl:10%;
+}
+
+.btn-remove {
+    --button-h: 353;
+    --button-s: 86%;
+    --button-l: 54%;
+
+    --button-fh: 353;
+    --button-fs: 80%;
+    --button-fl: 95%;
+}

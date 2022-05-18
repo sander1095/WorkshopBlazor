@@ -1,0 +1,12 @@
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\bin\Debug\net6.0\Class Library.deps.json
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\bin\Debug\net6.0\Class Library.dll
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\bin\Debug\net6.0\Class Library.pdb
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.csproj.AssemblyReference.cache
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.GeneratedMSBuildEditorConfig.editorconfig
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.AssemblyInfoInputs.cache
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.AssemblyInfo.cs
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.csproj.CoreCompileInputs.cache
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.dll
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\ref\Class Library.dll
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\Class Library.pdb
+F:\Git\Trendwatch WebDev - workshop Blazor\Blazor Server\Class Library\obj\Debug\net6.0\refint\Class Library.dll

@@ -1,0 +1,34 @@
+﻿.variable-wrapper {
+    --card-h: 34;
+    --card-s: 0%;
+    --card-l: 98%;
+    --card-background: hsl(var(--card-h), var(--card-s), var(--card-l));
+}
+
+.product {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background: hsl(var(--card-h), var(--card-s), var(--card-l));
+    border-radius: 10px;
+    box-shadow: 1.1px 1.9px 2.7px rgba(0, 0, 0, 0.016), 2.8px 4.8px 6.9px rgba(0, 0, 0, 0.022), 5.7px 9.7px 14.2px rgba(0, 0, 0, 0.028), 11.7px 20.1px 29.2px rgba(0, 0, 0, 0.034), 32px 55px 80px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.product:hover {
+    --card-s: 80%;
+    --card-l: 96%;
+}
+
+.product-image {
+    border-radius: 10px 10px 0 0;
+}
+
+.product .product-info {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+}
